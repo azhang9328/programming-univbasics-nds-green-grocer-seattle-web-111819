@@ -31,6 +31,7 @@ def consolidate_cart(cart)
         break
       end
       newCartIndex += 1 
+      puts newCart
     end 
     if newCart.length > 0 && newCartIndex == newCart.length
         newCart.push(cart[oldCartIndex])
@@ -38,7 +39,6 @@ def consolidate_cart(cart)
     end
     oldCartIndex += 1
   end 
-  puts newCart
   return newCart
 end 
 
