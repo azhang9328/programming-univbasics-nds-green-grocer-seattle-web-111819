@@ -33,8 +33,10 @@ def consolidate_cart(cart)
         newCart[newCart.length - 1][:count] = 1
       end
     else
+      puts "new cart empty"
       newCart.push(cart[oldCartIndex])
       newCart[0][:count] = 1
+      puts newCart
     end
     oldCartIndex += 1
   end 
