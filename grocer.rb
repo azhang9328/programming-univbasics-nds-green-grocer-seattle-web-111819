@@ -89,10 +89,10 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   totalprice = 0
-  finalCart = []
-  cart =  consolidate_cart(cart)
-  
-  totalprice = cart[0][:price]
-  return totalprice
+  finalCart = consolidate_cart(cart)
   puts cart
+  apply_coupons(finalCart, coupons)
+  puts cart
+  totalprice = finalCart[0][:price]
+  return totalprice
 end
