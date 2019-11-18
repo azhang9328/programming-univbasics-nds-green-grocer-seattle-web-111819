@@ -88,6 +88,8 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+  totalprice = 0
   cart =  consolidate_cart(cart)
+  puts cart[0][:price]
   puts cart
 end
