@@ -54,9 +54,9 @@ def apply_coupons(cart, coupons)
       puts "inner loop"
       if coupons[coupCartIndex][:item] == cart[consolCartIndex][:item]
         puts "if state"
-        cart[consolCartIndex][:count] = cart[consolCartIndex][:count] - coupons[coupCartIndex][:num]
         cart.push({:item => cart[consolCartIndex][:name]})
-        puts cart[consolCartIndex][:name]
+        cart[consolCartIndex][:count] = cart[consolCartIndex][:count] - coupons[coupCartIndex][:num]
+        
         puts cart
         break 
       end 
