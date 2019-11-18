@@ -91,5 +91,6 @@ def checkout(cart, coupons)
   totalprice = 0
   cart =  consolidate_cart(cart)
   totalprice = cart[0][:price]
+  return totalprice
   puts cart
 end
