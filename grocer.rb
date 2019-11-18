@@ -27,8 +27,8 @@ def consolidate_cart(cart)
         puts newCart[newCartIndex][:item]
         puts cart[oldCartIndex][:item]
         if newCart[newCartIndex][:item] == cart[oldCartIndex][:item]
-          puts "match"
           newCart[newCartIndex][:count] += 1
+          break
         end
         newCartIndex += 1 
       end 
