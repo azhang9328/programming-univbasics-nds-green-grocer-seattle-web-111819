@@ -73,6 +73,7 @@ def apply_clearance(cart)
     if cart[origCartIndex][:clearance] == true
       cart[origCartIndex][:price] = cart[origCartIndex][:price] - (cart[origCartIndex][:price] * 0.20)
       cart[origCartIndex][:price].round(2)
+      puts "rounded discount"
     end
   
   
