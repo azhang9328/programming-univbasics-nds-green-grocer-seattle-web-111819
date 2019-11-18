@@ -89,12 +89,21 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   totalprice = 0
+  finalCartIndex = 0
   finalCart = consolidate_cart(cart)
   puts finalCart
   apply_coupons(finalCart, coupons)
   puts finalCart
   apply_clearance(finalCart)
   puts finalCart
-  totalprice = finalCart[0][:price]
+  
+  while finalCartIndex < finalCart.length do 
+    iprice = 0
+    iprice = finalCart[finalCartIndex][:price] * finalCart[finalCartIndex][:count]
+    puts iprice
+    totalprice = totalprice + iprice
+    puts totalprice
+    finalCartIndex += 1
+  end   
   return totalprice
 end
