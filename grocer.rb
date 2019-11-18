@@ -47,13 +47,9 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   consolCartIndex = 0 
   while consolCartIndex < cart.length do 
-    puts "outer loop"
     coupCartIndex = 0 
-    puts coupons.length 
     while coupCartIndex < coupons.length do 
-      puts "inner loop"
       if coupons[coupCartIndex][:item] == cart[consolCartIndex][:item]
-        puts "if state"
         cart[consolCartIndex][:count] = cart[consolCartIndex][:count] - coupons[coupCartIndex][:num]
         cart.push({:item => "#{cart[consolCartIndex][:item]} W/COUPON", :price => coupons[coupCartIndex][:cost] / coupons[coupCartIndex][:num], :clearance => cart[consolCartIndex][:clearance], :count => coupons[coupCartIndex][:num]})
         break 
@@ -71,7 +67,18 @@ def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  origCartIndex = 0 
+  while origCartIndex < cart.length do 
+    puts "outer loop"  
+    if cart[origCartIndex][:clearance] == true
+      
+    end
   
+  
+  origCartIndex += 1
+  end   
+  puts cart
+  return cart
 end
 
 def checkout(cart, coupons)
