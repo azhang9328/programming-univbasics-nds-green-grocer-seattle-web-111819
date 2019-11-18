@@ -71,7 +71,7 @@ def apply_clearance(cart)
   while origCartIndex < cart.length do 
     puts "outer loop"  
     if cart[origCartIndex][:clearance] == true
-      cart[origCartIndex][:price] = (cart[origCartIndex][:price] * 0.20
+      cart[origCartIndex][:price] = (cart[origCartIndex][:price] * 0.20)
     end
   
   
