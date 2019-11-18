@@ -19,16 +19,12 @@ def consolidate_cart(cart)
   oldCartIndex = 0
   while oldCartIndex < cart.length do 
     newCartIndex = 0
-    puts newCart.length
     if newCart.length == 0
       newCart.push(cart[oldCartIndex])
       newCart[0][:count] = 1
       oldCartIndex += 1
     end
     while newCartIndex < newCart.length do
-      puts "inner loop"
-      puts newCart
-      puts cart[oldCartIndex][:item]
       if newCart.length > 0 && newCart[newCartIndex][:item] == cart[oldCartIndex][:item]
         newCart[newCartIndex][:count] += 1
         break
@@ -52,9 +48,18 @@ def apply_coupons(cart, coupons)
   coupCart = []
   consolCartIndex = 0 
   while consolCartIndex < cart.length do 
+    puts "outer loop"
     coupCartIndex = 0 
     puts coupCart.length 
     while coupCartIndex < coupons.length do 
+      puts "inner loop"
+      if coupons[consolCartIndex][:item] == coupCart[consolCartIndex][:item]
+        coupCart[consolCartIndex][:count] -= 1
+        break 
+      end 
+    coupCartIndex += 1  
+    end  
+
     
   consolCartIndex += 1   
   end 
