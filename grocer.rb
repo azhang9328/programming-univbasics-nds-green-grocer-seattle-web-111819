@@ -26,14 +26,16 @@ def consolidate_cart(cart)
         end
         newCartIndex += 1 
       end 
-    if newCart.length == 0
-      newCart.push(cart[oldCartIndex])
-      newCart[0][:count] = 1
-      puts newCart
-    end
-    if newCart.length > 0 && newCartIndex == newCart.length
+      if newCart.length > 0 && newCartIndex == newCart.length
         newCart.push(cart[oldCartIndex])
         newCart[newCart.length - 1][:count] = 1
+      end
+    else
+      if newCart.length == 0
+        newCart.push(cart[oldCartIndex])
+        newCart[0][:count] = 1
+        puts newCart
+      end
     end
     oldCartIndex += 1
   end 
