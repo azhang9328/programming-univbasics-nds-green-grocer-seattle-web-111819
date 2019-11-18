@@ -93,6 +93,8 @@ def checkout(cart, coupons)
   puts finalCart
   apply_coupons(finalCart, coupons)
   puts finalCart
+  apply_clearance(finalCart)
+  puts finalCart
   totalprice = finalCart[0][:price]
   return totalprice
 end
