@@ -49,7 +49,12 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  
+  coupCart = []
+  consolCartIndex = 0 
+  while consolCartIndex < cart.length do 
+    puts coupons
+  consolCartIndex += 1   
+  end 
 end
 
 def apply_clearance(cart)
