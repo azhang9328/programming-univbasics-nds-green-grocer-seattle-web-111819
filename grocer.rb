@@ -105,5 +105,8 @@ def checkout(cart, coupons)
     puts totalprice
     finalCartIndex += 1
   end   
+  if totalprice > 100
+  totalprice = totalprice - (totalprice * 0.10)  
+  end  
   return totalprice
 end
