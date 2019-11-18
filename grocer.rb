@@ -68,6 +68,7 @@ def apply_clearance(cart)
   #
   # REMEMBER: This method **should** update cart
   origCartIndex = 0 
+  puts cart.length
   while origCartIndex < cart.length do 
     puts "loopy"  
     if cart[origCartIndex][:clearance] == true
