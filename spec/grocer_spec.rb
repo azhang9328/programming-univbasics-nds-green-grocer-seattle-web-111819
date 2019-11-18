@@ -198,7 +198,7 @@ describe "Grocer" do
       cart = [find_item_by_name_in_collection('TEMPEH', items)]
       puts cart
       consolidated_cart = consolidate_cart(cart)
-
+      puts consolidated_cart
       clearance_applied_cart = apply_clearance(consolidated_cart)
       expect(clearance_applied_cart.first[:price]).to be_within(0.1).of(2.40)
     end
