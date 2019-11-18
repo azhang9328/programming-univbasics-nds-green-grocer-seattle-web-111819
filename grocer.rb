@@ -64,6 +64,7 @@ def apply_coupons(cart, coupons)
     
   consolCartIndex += 1   
   end 
+  return cart
 end
 
 def apply_clearance(cart)
