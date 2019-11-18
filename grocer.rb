@@ -15,36 +15,33 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-  oldCartIndex = 0
   newCart = []
+  oldCartIndex = 0
   while oldCartIndex < cart.length do 
-    newCartIndex = 0 
-    puts newCart.length 
-    if newCart.length == 0 
+    newCartIndex = 0
+    puts newCart.length
+    if newCart.length == 0
       newCart.push(cart[oldCartIndex])
-      newCart[0][:count] = 1 
-      oldCartIndex += 1 
-    end 
-    if newCart[newCartIndex][:item] == cart[oldCartIndex]
-      puts "add item count"
-      newCart[newCartIndex][:count] += 1 
-    elsif newCartIndex == newCart.length 
-      puts "new item count"
-      newCart.push(cart[oldCartIndex])
-      newCart[newCart.length - 1][:count] = 1 
-    else 
-      until newCart[newCartIndex][:item]  == cart[oldCartIndex][:item]
-      puts newCart
-      newCartIndex += 1 
+      newCart[0][:count] = 1
+      oldCartIndex += 1
     end
+    while newCartIndex < newCart.length do
+      puts "inner loop"
+      puts newCart
+      puts cart[oldCartIndex][:item]
+      if newCart.length > 0 && newCart[newCartIndex][:item] == cart[oldCartIndex][:item]
+        newCart[newCartIndex][:count] += 1
+        break
+      end
+      newCartIndex += 1 
     end 
-  end   
+    if newCart.length > 0 && newCartIndex == newCart.length
+        newCart.push(cart[oldCartIndex])
+        newCart[newCart.length - 1][:count] = 1
+    end
+    oldCartIndex += 1
+  end 
   return newCart
-  
 
 end 
 
