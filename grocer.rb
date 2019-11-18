@@ -69,13 +69,10 @@ def apply_clearance(cart)
   origCartIndex = 0 
   puts cart.length
   while origCartIndex < cart.length do 
-    puts "loopy"  
     if cart[origCartIndex][:clearance] == true
       cart[origCartIndex][:price] = cart[origCartIndex][:price] - (cart[origCartIndex][:price] * 0.20)
       cart[origCartIndex][:price].round(2)
-      puts "updated price"
     end
-    puts cart
   origCartIndex += 1
   end   
   return cart
@@ -91,4 +88,5 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+  puts cart
 end
