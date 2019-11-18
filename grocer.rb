@@ -75,9 +75,9 @@ def apply_clearance(cart)
       cart[origCartIndex][:price].round(2)
       puts "updated price"
     end
+    puts cart
   origCartIndex += 1
   end   
-  puts cart
   return cart
 end
 
