@@ -70,11 +70,6 @@ def apply_clearance(cart)
   origCartIndex = 0 
   puts cart.length
   while origCartIndex < cart.length do 
-    if cart.length == 0 
-      cart[origCartIndex][:price] = cart[origCartIndex][:price] - (cart[origCartIndex][:price] * 0.20)
-      cart[origCartIndex][:price].round(2)
-    origCartIndex += 1  
-    end  
     puts "loopy"  
     if cart[origCartIndex][:clearance] == true
       cart[origCartIndex][:price] = cart[origCartIndex][:price] - (cart[origCartIndex][:price] * 0.20)
