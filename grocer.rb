@@ -52,7 +52,9 @@ def apply_coupons(cart, coupons)
   coupCart = []
   consolCartIndex = 0 
   while consolCartIndex < cart.length do 
-    puts coupons
+    if cart[consolCartIndex][:item] == coupons[consolCartIndex][:item]
+    
+    end  
   consolCartIndex += 1   
   end 
 end
