@@ -45,15 +45,14 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  coupCart = []
   consolCartIndex = 0 
   while consolCartIndex < cart.length do 
     puts "outer loop"
     coupCartIndex = 0 
-    puts coupCart.length 
+    puts coupons.length 
     while coupCartIndex < coupons.length do 
       puts "inner loop"
-      if coupons[coupCartIndex][:item] == coupCart[consolCartIndex][:item]
+      if coupons[coupCartIndex][:item] == cart[consolCartIndex][:item]
         puts "if state"
 
         break 
