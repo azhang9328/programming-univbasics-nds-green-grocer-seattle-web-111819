@@ -19,14 +19,14 @@ def consolidate_cart(cart)
   oldCartIndex = 0
   while oldCartIndex < cart.length do 
     newCartIndex = 0
-    if newCartIndex > 0
+    if newCart.length > 0
       while newCartIndex < newCart.length do
-        if newCart.length > 0 && newCart[newCartIndex][:item] == cart[oldCartIndex][:item]
+        if newCart[newCartIndex][:item] == cart[oldCartIndex][:item]
           newCart[newCartIndex][:count] += 1
         end
         newCartIndex += 1 
       end 
-      if newCart.length > 0 && newCartIndex == newCart.length
+      if newCartIndex == newCart.length
         newCart.push(cart[oldCartIndex])
         newCart[newCart.length - 1][:count] = 1
       end
