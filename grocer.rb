@@ -56,6 +56,7 @@ def apply_coupons(cart, coupons)
         puts "if state"
         cart[consolCartIndex][:count] = cart[consolCartIndex][:count] - coupons[coupCartIndex][:num]
         cart.push({:item => cart[consolCartIndex][:name]})
+        puts cart[consolCartIndex][:name]
         puts cart
         break 
       end 
