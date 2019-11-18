@@ -90,6 +90,6 @@ def checkout(cart, coupons)
   # some irritated customers
   totalprice = 0
   cart =  consolidate_cart(cart)
-  puts cart[0][:price]
+  totalprice = cart[0][:price]
   puts cart
 end
